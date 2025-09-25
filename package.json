@@ -1,0 +1,22 @@
+{
+  "name": "todo-app-microservices",
+  "version": "1.0.0",
+  "description": "TODO Application with microservices architecture",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "cd api-gateway && npm install && cd ../todo-service && npm install",
+    "start-todo": "cd todo-service && npm start",
+    "start-gateway": "cd api-gateway && npm start",
+    "dev-todo": "cd todo-service && npm run dev",
+    "dev-gateway": "cd api-gateway && npm run dev",
+    "test-api": "node test-api.js",
+    "docker-up": "docker-compose up --build",
+    "docker-down": "docker-compose down"
+  },
+  "keywords": ["todo", "microservices", "nodejs", "api-gateway"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "axios": "^1.6.0"
+  }
+}
